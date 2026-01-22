@@ -1,0 +1,2 @@
+Salut, test message chiffre.
+Fin de demo.

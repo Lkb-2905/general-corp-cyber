@@ -1,0 +1,2 @@
+Usage educatif uniquement.
+Ne pas deployer sur des machines tierces.
