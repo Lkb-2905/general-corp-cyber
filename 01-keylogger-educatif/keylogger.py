@@ -5,7 +5,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Keylogger educatif (local)")
     parser.add_argument("--enable", action="store_true", help="Requis pour demarrer")
     parser.add_argument("--output", default="keys.log")
+    parser.add_argument("--demo", action="store_true", help="Mode demo sans capture clavier")
     args = parser.parse_args()
+
+    if args.demo:
+        demo_keys = ["h", "e", "l", "l", "o", " ", "1", "2", "3", "[ENTER]"]
+        with open(args.output, "w", encoding="utf-8") as handle:
+            handle.write("\n".join(demo_keys) + "\n")
+        print(f"Demo generee: {args.output}")
+        return
 
     if not args.enable:
         print("Usage educatif uniquement. Lancez avec --enable pour demarrer.")

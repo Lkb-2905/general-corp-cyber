@@ -1,3 +1,4 @@
+import argparse
 import os
 import socket
 
@@ -15,6 +16,17 @@ def get_cipher():
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Serveur de chat chiffre")
+    parser.add_argument("--demo", action="store_true", help="Mode demo sans socket")
+    args = parser.parse_args()
+
+    if args.demo:
+        print("Serveur en ecoute sur 127.0.0.1:5001")
+        print("CHAT_KEY=demo_key_base64")
+        print("Client: Salut, connexion OK ?")
+        print("Moi: Oui, messages chiffres.")
+        return
+
     host = "127.0.0.1"
     port = 5001
     cipher = get_cipher()
