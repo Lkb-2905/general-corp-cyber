@@ -1,5 +1,9 @@
 # General Corp - Cyber (demo portfolio)
 
+![Tests](https://github.com/Lkb-2905/general-corp-cyber/actions/workflows/tests.yml/badge.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+
 Objectif: demonstrer des concepts cyber courants avec des outils simples
 et un mode demo quand il y a des dependances.
 
@@ -27,6 +31,13 @@ python exif_reader.py --demo
 cd ../05-encrypted-chat
 python server.py --demo
 python client.py --demo
+```
+
+## Installation rapide
+```
+python -m venv .venv
+source .venv/bin/activate  # ou .venv\\Scripts\\activate sous Windows
+pip install -r requirements.txt
 ```
 
 ## Captures conseillees
